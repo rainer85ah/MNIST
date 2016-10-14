@@ -1,18 +1,44 @@
+# -*- coding: utf-8 -*-
+
+"""
+MIT License
+
+Copyright (c) 2016 Rainer Arencibia
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
 
 """
 The lenet_mnist.py  script will be our driver program used to instantiate the LeNet network architecture,
 train the model (or load the model, if our network is pre-trained),
 and then evaluate the network performance on the MNIST dataset.
 """
-from cnn.network.lenet import LeNet
-from keras.callbacks import EarlyStopping, TensorBoard
-from sklearn.cross_validation import train_test_split, cross_val_score
-from sklearn import datasets, metrics
-from keras.datasets import mnist
-from keras.optimizers import SGD, Adadelta
-from keras.utils import np_utils, visualize_util
-import numpy as np
 import argparse
+import numpy as np
+
+from keras.callbacks import TensorBoard
+from keras.optimizers import SGD
+from keras.utils import np_utils, visualize_util
+from sklearn import datasets
+from sklearn.cross_validation import train_test_split
+
+from cnn.network.lenet import LeNet
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()

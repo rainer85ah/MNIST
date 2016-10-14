@@ -1,14 +1,7 @@
-
+# -*- coding: utf-8 -*-
 """
-lenet-mnist.py file will do:
-
-    Loading the MNIST dataset.
-    Partitioning MNIST into training and testing splits.
-    Loading and compiling the LeNet architecture.
-    Training the network.
-    Optionally saving the serialized network weights to disk so that it can be reused (without having to re-train the network).
-    Displaying visual examples of the network output to demonstrate that our implementaiton is indeed working properly.
-
+this is where the network implementations themselves will be stored. As the name suggests,
+the lenet.py  file will define a class named LeNet , which is our actual LeNet implementation in Python + Keras.
 """
 # -*- coding: utf-8 -*-
 __author__ = 'Rainer Arencibia'
